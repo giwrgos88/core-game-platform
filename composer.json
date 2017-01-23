@@ -1,0 +1,49 @@
+{
+  "name": "giwrgos88/core-game-platform",
+  "description": "Package for adding backoffice functionalities for web app on Laravel Framework.",
+  "keywords": [
+    "giwrgos88",
+    "core",
+    "laravel",
+    "facebook app",
+    "web game"
+  ],
+  "license": "MIT",
+  "authors": [{
+    "name": "George Panayi",
+    "email": "g3o.panayi@gmail.com",
+    "role": "Developer"
+  }],
+  "support": {
+    "email": "g3o.panayi@gmail.com"
+  },
+  "require": {
+    "php": ">=7.0",
+    "spatie/laravel-analytics": "^1.4",
+    "laravelcollective/html": "^5.2",
+    "ultraware/roles": "^5.3",
+    "jenssegers/agent": "^2.3",
+    "laracasts/utilities": "~2.0",
+    "maatwebsite/excel": "~2.1.0",
+    "nesbot/carbon": "^1.21",
+    "giwrgos88/installer-admin-game-platform": "^1.0",
+    "maatwebsite/laravel-sidebar": "~2.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "orchestra/testbench": "~3.1",
+    "mockery/mockery": "^0.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Giwrgos88\\Game\\Core\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
