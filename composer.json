@@ -53,7 +53,7 @@
       "php artisan vendor:publish --provider='Giwrgos88\\Game\\Core\\Providers\\AssetsServiceProvider' --tag=assets",
       "php artisan vendor:publish --provider='Giwrgos88\\Installer\\Providers\\AssetsServiceProvider' --tag=installer_config",
       "php artisan vendor:publish --provider='Giwrgos88\\Installer\\Providers\\AssetsServiceProvider' --tag=installer_assets",
-      "php artisan vendor:publish --provider='Giwrgos88\\Game\\Front\\Providers\\AssetsServiceProvider' --tag=installer_assets",
+      "php artisan vendor:publish --provider='Giwrgos88\\Game\\Front\\Providers\\AssetsServiceProvider' --tag=installer_assets"
     ]
   },
   "minimum-stability": "dev",
