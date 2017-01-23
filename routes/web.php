@@ -51,33 +51,6 @@ Route::group(['prefix' => config('core_game.admin-prefix'), 'as' => 'Core::', 'n
 
 /*
 |--------------------------------------------------------------------------
-| Front Routes
-|--------------------------------------------------------------------------
-|
-| Here is where all the front routes goes.
-|
- */
-use Jenssegers\Agent\Agent;
-
-//Route::post('/', ['as' => 'front.index', 'uses' => 'Front\HomeController@index']);
-//Route::get('/', ['as' => 'front.index', 'middleware' => 'install', 'uses' => 'Front\HomeController@index']);
-
-//Route::post('/game', ['as' => 'front.game', 'uses' => 'Front\HomeController@game']);
-
-Route::get('/enter', function () {
-	$agent = new Agent();
-
-	if (($agent->isMobile()) || ($agent->isTablet())) {
-		return Redirect::to('/');
-	}
-	if (!is_null(getenv('FACEBOOK_APP_URL'))) {
-		return Redirect::to(getenv('FACEBOOK_APP_URL'));
-	}
-	return Redirect::to('/');
-});
-
-/*
-|--------------------------------------------------------------------------
 | Authentication Routes
 |--------------------------------------------------------------------------
 |

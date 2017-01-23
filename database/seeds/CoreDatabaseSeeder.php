@@ -1,10 +1,10 @@
 <?php
 
+use Giwrgos88\Game\Core\Models\Admin\Role;
 use Illuminate\Database\Seeder;
 use Ultraware\Roles\Models\Permission;
-use Ultraware\Roles\Models\Role;
 
-class DatabaseSeeder extends Seeder {
+class CoreDatabaseSeeder extends Seeder {
 	/**
 	 * Run the database seeds.
 	 *
