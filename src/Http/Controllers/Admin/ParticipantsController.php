@@ -16,10 +16,8 @@ class ParticipantsController extends Controller {
 	}
 
 	public function index() {
-		/*
-			Add search features
-		*/
-		$participants = $this->participants->orderBy('id', 'ASC')->paginate(20);
+		$participants = $this->objectFactory->create(ParentFactory::PARTICIPANTS)
+			->get();
 
 		return view('core::backend.pages.participants.participants', ['participants' => $participants]);
 	}

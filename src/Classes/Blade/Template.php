@@ -7,11 +7,12 @@ class Template {
 
 		$key = config('core_game.participant_meta_key');
 
-		if (array_key_exists($key, $participantMetaList)) {
-			return 'https://graph.facebook.com/' . $participantMetaList[$key] . '/picture?type=' . $size;
+		if (!is_null($key)) {
+			if (array_key_exists($key, $participantMetaList)) {
+				return 'https://graph.facebook.com/' . $participantMetaList[$key] . '/picture?type=' . $size;
+			}
 		}
-
-		return '/assets/backend/img/default_avatar.jpg';
+		return '/backend/img/default_avatar.jpg';
 	}
 
 	public static function formatDate($date, $format = 'M d, Y') {

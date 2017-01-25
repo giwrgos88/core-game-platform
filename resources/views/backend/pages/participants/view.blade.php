@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-block">
                         <div class="hidden-xs hidden-sm col-md-6">
-                            <img src="{{{Template::participant_image([])}}}" class="img-avatar">
+                            <img src="{{{Template::participant_image($participant->meta->pluck('meta_value','meta_key')->toArray())}}}" class="img-avatar">
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6">
                             <h1>{{{trans('core::core.participants.details.title')}}}</h1>

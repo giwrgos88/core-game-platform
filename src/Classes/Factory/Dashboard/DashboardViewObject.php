@@ -2,6 +2,7 @@
 
 namespace Giwrgos88\Game\Core\Classes\Factory\Dashboard;
 
+use Auth;
 use Giwrgos88\Game\Core\Models\Admin\Participants;
 use Giwrgos88\Game\Core\Repositories\Interfaces\Factory\FactoryInterface as IFactory;
 
@@ -45,8 +46,14 @@ final class DashboardViewObject implements IFactory {
 		$this->all_participants = Participants::count();
 		$this->new_participants = 0;
 		$this->latest_participants = [];
-		//$this->new_participants = Participants::where('created_at', '>=', Auth::user()->last_login_at)->count();
-		//$this->latest_participants = Participants::where('created_at', '>=', Auth::user()->last_login_at)->take(config('core_game.dashboard_latest_participants'))->get();
+		if (is_null(Auth::guard('core_user')->user()->last_login_at)) {
+			$this->new_participants = Participants::count();
+			$this->latest_participants = Participants::with('meta')->take(config('core_game.dashboard_latest_participants'))->get();
+		} else {
+			$this->new_participants = Participants::where('created_at', '>=', Auth::guard('core_user')->user()->last_login_at)->count();
+			$this->latest_participants = Participants::with('meta')->where('created_at', '>=', Auth::guard('core_user')->user()->last_login_at)->take(config('core_game.dashboard_latest_participants'))->get();
+		}
+
 		return $this;
 	}
 }

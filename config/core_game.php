@@ -17,7 +17,7 @@ return [
 	//Enable if the application will use SSL
 	'SSL_ENABLED' => false,
 
-	'participant_meta_key' => '',
+	'participant_meta_key' => null,
 
 	/*
 		Fields options to export on excel

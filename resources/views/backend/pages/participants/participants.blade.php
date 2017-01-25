@@ -32,7 +32,7 @@
                                 <tr>
                                     <td class="text-xs-center">
                                         <div class="avatar">
-                                            <img src="{{{Template::participant_image([], 'small')}}}" class="img-avatar">
+                                            <img src="{{{Template::participant_image($participant->meta->pluck('meta_value','meta_key')->toArray(), 'small')}}}" class="img-avatar">
                                         </div>
                                     </td>
                                     <td>

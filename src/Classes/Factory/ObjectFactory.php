@@ -6,6 +6,7 @@ use Giwrgos88\Game\Core\Classes\Factory\Dashboard\DashboardViewObject;
 use Giwrgos88\Game\Core\Classes\Factory\Export\ExportingFileObject;
 use Giwrgos88\Game\Core\Classes\Factory\Export\ExportingViewObject;
 use Giwrgos88\Game\Core\Classes\Factory\ParentFactory;
+use Giwrgos88\Game\Core\Classes\Factory\Participant\ParticipantsListViewObject;
 use Giwrgos88\Game\Core\Classes\Factory\Participant\ParticipantViewObject;
 use Giwrgos88\Game\Core\Classes\Factory\Roles\RolesListViewObject;
 use Giwrgos88\Game\Core\Classes\Factory\Roles\RoleViewObject;
@@ -17,6 +18,8 @@ class ObjectFactory extends ParentFactory {
 		switch ($type) {
 		case parent::DASHBOARD:
 			return DashboardViewObject::getInstance();
+		case parent::PARTICIPANTS:
+			return ParticipantsListViewObject::getInstance();
 		case parent::PARTICIPANTVIEW:
 			return ParticipantViewObject::getInstance();
 		case parent::USERS:

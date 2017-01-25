@@ -14,6 +14,7 @@ abstract class ParentFactory {
 	const USERVIEW = 'user_view';
 	const ROLES = 'roles';
 	const ROLEVIEW = 'role_view';
+	const PARTICIPANTS = 'participants';
 
 	abstract protected function createObject(string $type);
 

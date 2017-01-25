@@ -51,7 +51,7 @@
                                 <tr>
                                     <td class="text-xs-center">
                                         <div class="avatar">
-                                            <img src="{{{Template::participant_image([], 'small')}}}" class="img-avatar">
+                                            <img src="{{{Template::participant_image($participant->meta->pluck('meta_value','meta_key')->toArray())}}}" class="img-avatar">
                                         </div>
                                     </td>
                                     <td>
@@ -67,7 +67,7 @@
                                         {!! Template::status($participant->participant_status) !!}
                                     </td>
                                     <td class="text-xs-center">
-                                        <a href="{{URL::route('Core::admin.participants.show', $participant->id)}}" class="btn btn-primary">{{{trans('core::core.table.view')}}}</a>
+                                        <a href="{{URL::route('Core::admin.participants.show', $participant->id)}}" class="btn btn-primary">{{{trans('core::core.buttons.view')}}}</a>
                                     </td>
                                 </tr>
                                 @endforeach
