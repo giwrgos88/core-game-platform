@@ -4,6 +4,7 @@ namespace Giwrgos88\Game\Core\Providers;
 
 use App;
 use Illuminate\Support\ServiceProvider;
+use URL;
 
 /**
  * Class CoreServiceProvider
@@ -59,6 +60,9 @@ class CoreServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
+		if (config('core_game.SSL_ENABLED')) {
+			URL::forceSchema('https');
+		}
 	}
 
 	/**

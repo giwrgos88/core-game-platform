@@ -1,6 +1,6 @@
 <?php
 
-namespace GiwrgosPanayi\Game\Http\Middleware;
+namespace Giwrgos88\Game\Core\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Redirect;

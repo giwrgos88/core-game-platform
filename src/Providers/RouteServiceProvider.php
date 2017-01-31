@@ -78,6 +78,7 @@ class RouteServiceProvider extends ServiceProvider {
 
 		$kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
 		$kernel->pushMiddleware('Maatwebsite\Sidebar\Middleware\ResolveSidebars');
+
 	}
 
 	/**
@@ -127,7 +128,7 @@ class RouteServiceProvider extends ServiceProvider {
 	protected function mapWebRoutes() {
 		$middleware = ['core_user', 'installer'];
 		if (config('core_game.SSL_ENABLED')) {
-			$middleware[] = ['force_ssl'];
+			$middleware[] = 'force_ssl';
 		}
 		Route::group([
 			'middleware' => $middleware,
@@ -145,8 +146,12 @@ class RouteServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	protected function mapApiRoutes() {
+		$middleware = ['api'];
+		if (config('core_game.SSL_ENABLED')) {
+			$middleware[] = 'force_ssl';
+		}
 		Route::group([
-			'middleware' => ['api'],
+			'middleware' => $middleware,
 			'namespace' => $this->namespace,
 			'prefix' => 'api',
 		], function ($router) {
