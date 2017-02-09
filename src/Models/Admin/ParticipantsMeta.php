@@ -30,6 +30,6 @@ class ParticipantsMeta extends Model {
 	protected $fillable = ['participant_id', 'meta_key', 'meta_value'];
 
 	public function participant() {
-		return $this->belongsTo('Giwrgos88\Game\Core\Models\Admin\Participants', 'id', 'participant_id');
+		return $this->belongsTo('Giwrgos88\Game\Core\Models\Admin\Participants', 'participant_id', 'id');
 	}
 }

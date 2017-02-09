@@ -3541,7 +3541,7 @@ header.navbar .navbar-nav .nav-link {
   display: inline; }
   .page-item:first-child .page-link, .pagination-datatables li:first-child .page-link, .pagination li:first-child .page-link, .page-item:first-child .pagination-datatables li a, .pagination-datatables li .page-item:first-child a, .pagination-datatables li:first-child a, .page-item:first-child .pagination li a, .pagination li .page-item:first-child a, .pagination li:first-child a {
     margin-left: 0; }
-  .page-item.active .page-link, .pagination-datatables li.active .page-link, .pagination li.active .page-link, .page-item.active .pagination-datatables li a, .pagination-datatables li .page-item.active a, .pagination-datatables li.active a, .page-item.active .pagination li a, .pagination li .page-item.active a, .pagination li.active a, .page-item.active .page-link:focus, .pagination-datatables li.active .page-link:focus, .pagination li.active .page-link:focus, .page-item.active .pagination-datatables li a:focus, .pagination-datatables li .page-item.active a:focus, .pagination-datatables li.active a:focus, .page-item.active .pagination li a:focus, .pagination li .page-item.active a:focus, .pagination li.active a:focus, .page-item.active .page-link:hover, .pagination-datatables li.active .page-link:hover, .pagination li.active .page-link:hover, .page-item.active .pagination-datatables li a:hover, .pagination-datatables li .page-item.active a:hover, .pagination-datatables li.active a:hover, .page-item.active .pagination li a:hover, .pagination li .page-item.active a:hover, .pagination li.active a:hover {
+  ul.pagination li.active, .pagination-datatables li.active .page-link, .pagination li.active .page-link, .page-item.active .pagination-datatables li a, .pagination-datatables li .page-item.active a, .pagination-datatables li.active a, .page-item.active .pagination li a, .pagination li .page-item.active a, .pagination li.active a, .page-item.active .page-link:focus, .pagination-datatables li.active .page-link:focus, .pagination li.active .page-link:focus, .page-item.active .pagination-datatables li a:focus, .pagination-datatables li .page-item.active a:focus, .pagination-datatables li.active a:focus, .page-item.active .pagination li a:focus, .pagination li .page-item.active a:focus, .pagination li.active a:focus, .page-item.active .page-link:hover, .pagination-datatables li.active .page-link:hover, .pagination li.active .page-link:hover, .page-item.active .pagination-datatables li a:hover, .pagination-datatables li .page-item.active a:hover, .pagination-datatables li.active a:hover, .page-item.active .pagination li a:hover, .pagination li .page-item.active a:hover, .pagination li.active a:hover {
     z-index: 2;
     color: #fff;
     cursor: default;
@@ -3554,7 +3554,7 @@ header.navbar .navbar-nav .nav-link {
     background-color: #fff;
     border-color: #ddd; }
 
-.page-link, .pagination-datatables li a, .pagination li a {
+.page-link, .pagination-datatables li a, .pagination li a, .pagination li.active span, .pagination li.disabled span {
   position: relative;
   float: left;
   padding: 0.5rem 0.75rem;
@@ -3563,6 +3563,12 @@ header.navbar .navbar-nav .nav-link {
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd; }
+.pagination li.active span {
+    color: #fff;
+    cursor: default;
+    background-color: #20a8d8;
+    border-color: #20a8d8;
+}
   .page-link:focus, .pagination-datatables li a:focus, .pagination li a:focus, .page-link:hover, .pagination-datatables li a:hover, .pagination li a:hover {
     color: #167495;
     background-color: #cfd8dc;

@@ -30,7 +30,7 @@ class RouteServiceProvider extends ServiceProvider {
 		'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
 		'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
 		'can' => \Illuminate\Auth\Middleware\Authorize::class,
-		'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+		'guest' => \Giwrgos88\Game\Core\Http\Middleware\RedirectIfAuthenticated::class,
 		'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 		'no_auth' => \Giwrgos88\Game\Core\Http\Middleware\Authentication::class,
 		'permission' => \Giwrgos88\Game\Core\Http\Middleware\VerifyPermission::class,
